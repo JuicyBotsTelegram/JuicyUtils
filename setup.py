@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='JuicyUtils',
     version='1.0',
-    packages=['sshtunnel', "sqlite3", "time"],
+    packages=[],
     url='github.com/AlterJuice',
     license='',
     author='AlterJuice',
