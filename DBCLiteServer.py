@@ -6,8 +6,8 @@ import time
 from typing import TypeVar, Callable, Tuple, List
 
 
-_T = TypeVar("_T")
-_R = TypeVar("_R")
+__T = TypeVar("__T")
+__R = TypeVar("__R")
 
 
 class DBCLiteServer:
@@ -22,7 +22,7 @@ class DBCLiteServer:
         self.__itable: str | None = None
         self.__has_first_autoinc: bool | None = None
         self.__slice: slice | None = None
-        self.__type: Callable[[_T], _R] | None = None
+        self.__type: Callable[[__T], __R] | None = None
 
         self.__use_ssh_tunnel: bool = use_ssh_tunnel
         self.__kwargs: dict = kwargs
@@ -85,7 +85,7 @@ class DBCLiteServer:
         self.__slice = _slice
         return self
 
-    def row_view(self, row_type_func: Callable[[_T], _R] = lambda x: x) -> DBCLiteServer:
+    def row_view(self, row_type_func: Callable[[__T], __R] = lambda x: x) -> DBCLiteServer:
         self.__type = row_type_func
         return self
 
