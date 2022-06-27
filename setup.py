@@ -2,8 +2,8 @@ from setuptools import setup
 
 setup(
     name='JuicyUtils',
-    version='1.0',
-    packages=[],
+    version='1.1',
+    packages=["DBCLiteServer.py"],
     url='github.com/AlterJuice',
     license='',
     author='AlterJuice',
