@@ -2,8 +2,8 @@ from setuptools import setup
 
 setup(
     name='JuicyUtils',
-    version='1.11',
-    packages=["."],
+    version='1.12',
+    packages=["JuicyUtils"],
     url='github.com/AlterJuice',
     license='',
     author='AlterJuice',
