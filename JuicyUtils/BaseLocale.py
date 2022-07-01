@@ -3,10 +3,10 @@ from __future__ import annotations
 from typing import TypeVar, Generic
 from BaseStrings import BaseStrings
 
-__TBaseStrings = TypeVar("__TBaseStrings", bound=BaseStrings)
+TBaseStrings = TypeVar("TBaseStrings", bound=BaseStrings)
 
 
-class BaseLocale(Generic[__TBaseStrings]):
+class BaseLocale(Generic[TBaseStrings]):
     '''
     Example of use:
     # Creating new Strings-class with parent BaseStrings as it is required for BaseLocale
@@ -47,13 +47,13 @@ class BaseLocale(Generic[__TBaseStrings]):
 
     def __init__(self, def_lang=_default_lang):
         self._default_lang = def_lang
-        self._loaded_strings: 'dict[str, __TBaseStrings]' = dict()
+        self._loaded_strings: 'dict[str, TBaseStrings]' = dict()
 
-    def LANG(self, lang: str = _default_lang) -> __TBaseStrings | None:
+    def LANG(self, lang: str = _default_lang) -> TBaseStrings | None:
         if self._loaded_strings.__contains__(lang):
             return self._loaded_strings.get(lang)
         return self._loaded_strings.get(self._default_lang, None)
 
-    def add_language_from_strings(self, strings: __TBaseStrings):
+    def add_language_from_strings(self, strings: TBaseStrings):
         self._loaded_strings[strings.lang] = strings
 
