@@ -3,7 +3,7 @@ from __future__ import annotations
 import sqlite3
 import sshtunnel
 import time
-from typing import TypeVar, Callable, Tuple, List
+from typing import TypeVar, Callable, List
 
 
 __T = TypeVar("__T")
