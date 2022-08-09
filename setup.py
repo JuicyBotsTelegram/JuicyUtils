@@ -8,5 +8,5 @@ setup(
     license='',
     author='AlterJuice',
     author_email='alterjuice1758@gmail.com',
-    description='Simple DBCLiteServer'
+    description='Module contains all common used classes to create Telegram bots for Juicy org.'
 )
