@@ -108,3 +108,4 @@ class TimeTransformator:
         if str_int.isdigit():
             return int(str_int)
         return 0
+
