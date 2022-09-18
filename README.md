@@ -11,3 +11,4 @@ Your options:
 # JuicyUtils
 
 Module contains util functions and classes which are not depend on Telebot library functionality.
+[![Supported Python versions](https://img.shields.io/pypi/pyversions/JuicyUtils.svg)]
